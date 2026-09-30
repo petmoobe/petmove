@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de operaciones · Transporte de animales vivos</title>
+<link rel="stylesheet" href="/panel/panel.css">
+</head>
+<body>
+
+<div id="acceso" class="acceso">
+  <form class="acceso-caja" id="form-acceso">
+    <h1>Panel de operaciones</h1>
+    <p class="suave">Acceso restringido al equipo de la plataforma.</p>
+    <label for="token">Token de administración</label>
+    <input id="token" type="password" autocomplete="off" placeholder="Introduce el token" required>
+    <p class="error" id="error-acceso" hidden></p>
+    <button type="submit">Entrar</button>
+    <p class="suave nota">El token se imprime en la consola del servidor al arrancar.</p>
+  </form>
+</div>
+
+<div id="app" hidden>
+  <header class="cabecera">
+    <div>
+      <p class="marca">Plataforma de transporte de animales vivos</p>
+      <h1 id="titulo-vista">Resumen operativo</h1>
+    </div>
+    <div class="acciones-cabecera">
+      <button class="boton suave" id="boton-recargar">Actualizar</button>
+      <button class="boton suave" id="boton-revision">Revisión anual</button>
+      <button class="boton suave" id="boton-salir">Salir</button>
+    </div>
+  </header>
+
+  <nav class="pestanas" id="pestanas">
+    <button data-vista="resumen" class="activa">Resumen</button>
+    <button data-vista="reservas">Reservas</button>
+    <button data-vista="asignacion">Asignación</button>
+    <button data-vista="viajes">Viajes en curso</button>
+    <button data-vista="transportistas">Empresas</button>
+    <button data-vista="incidencias">Incidencias</button>
+    <button data-vista="pagos">Pagos</button>
+    <button data-vista="tarifas">Tarifas</button>
+    <button data-vista="auditoria">Auditoría</button>
+  </nav>
+
+  <main id="vista" class="vista"></main>
+
+  <div id="aviso" class="aviso" hidden></div>
+</div>
+
+<script src="/panel/panel.js"></script>
+</body>
+</html>

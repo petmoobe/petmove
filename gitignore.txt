@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno con secretos
+.env
+.env.local
+.env.production
+
+# Base de datos local de SQLite
+*.db
+*.db-shm
+*.db-wal
+
+# Registros y temporales
+*.log
+npm-debug.log*
+.DS_Store
+
+# Cobertura y cachés
+coverage/
+.cache/

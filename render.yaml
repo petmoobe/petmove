@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: petmove
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/salud
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: petmove-db
+          property: connectionString
+
+databases:
+  - name: petmove-db
+    plan: free
+    region: frankfurt
+    databaseName: petmove
+    user: petmove

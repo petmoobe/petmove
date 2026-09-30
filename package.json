@@ -1,0 +1,28 @@
+{
+  "name": "petmove-backend",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "API y panel de la plataforma de transporte puerta a puerta de animales vivos",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/seed.js",
+    "migrar": "node src/migrar.js",
+    "demo": "node src/seed.js && node src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  },
+  "optionalDependencies": {
+    "pg": "^8.12.0"
+  }
+}

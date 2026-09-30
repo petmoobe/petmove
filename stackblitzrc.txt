@@ -1,0 +1,8 @@
+{
+  "installCommand": "npm install",
+  "startCommand": "npm start",
+  "env": {
+    "NODE_ENV": "development",
+    "ADMIN_TOKEN": "demo-petmove-2026"
+  }
+}
